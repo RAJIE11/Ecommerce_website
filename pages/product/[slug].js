@@ -5,6 +5,11 @@ import { Product } from '../../components';
 import {useStateContext} from '../../context/StateContext'
 
 const ProductDetails = ({ product, products }) => {
+
+  if (!product) {
+    return <div>Loading...</div>; // Or handle the case where 'product' is not available
+  }
+
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
