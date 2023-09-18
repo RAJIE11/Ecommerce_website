@@ -45,7 +45,7 @@ const ProductDetails = ({ product, products }) => {
               <AiOutlineStar />
             </div>
             <p>
-              (20)
+              (144)
             </p>
           </div>
           <h4>Details: </h4>
@@ -90,9 +90,9 @@ export const getStaticPaths = async () => {
 
   const products = await client.fetch(query);
 
-  const paths = products.map((product) => ({
+  const paths = products.map((Product) => ({
     params: { 
-      slug: product.slug.current
+      slug: Product.slug.current
     }
   }));
 
