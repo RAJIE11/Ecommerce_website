@@ -5,6 +5,11 @@ import { Product } from '../../components';
 import {useStateContext} from '../../context/StateContext'
 
 const ProductDetails = ({ product, products }) => {
+
+  if (!product) {
+    return <div>Loading...</div>; // Or handle the case where 'product' is not available
+  }
+
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
@@ -45,7 +50,7 @@ const ProductDetails = ({ product, products }) => {
               <AiOutlineStar />
             </div>
             <p>
-              (20)
+              (144)
             </p>
           </div>
           <h4>Details: </h4>
@@ -90,9 +95,9 @@ export const getStaticPaths = async () => {
 
   const products = await client.fetch(query);
 
-  const paths = products.map((product) => ({
+  const paths = products.map((Product) => ({
     params: { 
-      slug: product.slug.current
+      slug: Product.slug.current
     }
   }));
 
