@@ -140,6 +140,11 @@ width: 100%;
 }
 .hero-banner-container .beats-solo{
   font-size: 20px;
+
+}
+.hero-banner-container .midname{
+  color:  #1f496e;
+  
 }
 .hero-banner-container button{
    border-radius: 15px;
@@ -181,13 +186,14 @@ width: 300px;
 line-height: 1.3;
 display: flex;
 flex-direction: column;
- color: #324d67;
+ color: #0b0b0c;
 
 }
 .desc p{
-  color: #5f5f5f;
-  font-weight: 100;
-text-align: end;
+  color: #1f496e;
+  font-weight: 150;
+  text-align: end;
+  font-size: 16px;
 }
 .desc h5{
   margin-bottom: 12px;
@@ -199,11 +205,11 @@ text-align: end;
 .products-heading{
   text-align: center;
   margin: 40px 0px;
- color: #324d67;
+ color: #1f3244;
 
 }
 .products-heading h2{
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 800;
 }
 .products-heading p{
@@ -287,7 +293,7 @@ text-align: end;
 }
 
 .footer-container{
-  color: #324d67;
+  color: #000407;
   text-align: center;
   margin-top: 20px;
   padding: 30px 10px;
@@ -303,6 +309,7 @@ text-align: end;
   font-size: 30px;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
  .cart-heading{
   display: flex;
